@@ -1,0 +1,581 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>Whatsapp web chat template - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container app">
+  <div class="row app-one">
+    <div class="col-sm-4 side">
+      <div class="side-one">
+        <div class="row heading">
+          <div class="col-sm-3 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+              <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+            </div>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot  pull-right">
+            <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+          <div class="col-sm-2 col-xs-2 heading-compose  pull-right">
+            <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="row searchBox">
+          <div class="col-sm-12 searchBox-inner">
+            <div class="form-group has-feedback">
+              <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row sideBar">
+          {% for user in users  %}
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">{{ user.username }}
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+         
+      </div>
+
+      <div class="side-two">
+        <div class="row newMessage-heading">
+          <div class="row newMessage-main">
+            <div class="col-sm-2 col-xs-2 newMessage-back">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+            <div class="col-sm-10 col-xs-10 newMessage-title">
+              New Chat
+            </div>
+          </div>
+        </div>
+
+        <div class="row composeBox">
+          <div class="col-sm-12 composeBox-inner">
+            <div class="form-group has-feedback">
+              <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Search People">
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row compose-sideBar">
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar1.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar3.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar5.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar2.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar3.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
+              </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+              <div class="row">
+                <div class="col-sm-8 col-xs-8 sideBar-name">
+                  <span class="name-meta">John Doe
+                </span>
+                </div>
+                <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                  <span class="time-meta pull-right">18:18
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+              <div class="avatar-icon">
+                <img src="https://bootdey.com/img/Content/avatar/avatar5.png">
+            </div>
+        </div>
+        <div class="col-sm-9 col-xs-9 sideBar-main">
+          <div class="row">
+            <div class="col-sm-8 col-xs-8 sideBar-name">
+              <span class="name-meta">John Doe
+            </span>
+            </div>
+            <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+              <span class="time-meta pull-right">18:18
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-8 conversation">
+  <div class="row heading">
+    <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+      <div class="heading-avatar-icon">
+        <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+      </div>
+    </div>
+    <div class="col-sm-8 col-xs-7 heading-name">
+      <a class="heading-name-meta">
+        {% if room.firt_user == request.user %}
+          {{ room.second_user }}
+        {% else %}
+          {{ room.first_user }}
+        {% endif %}
+      </a>
+      <span class="heading-online">Online</span>
+    </div>
+    <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+      <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class="row message" id="conversation">
+    {% for message in messages %}
+      {% if message.user == request.user %}
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-sender">
+              <div class="sender">
+                  <div class="message-text">
+                      {% if message.what_is_İt == 'text' %}
+                          {{message.content}}
+                      {% elif message.what_is_İt == 'image' %}
+                        <img src="{{message.content}}" width="250" height="250">
+                      {% elif message.what_is_İt == 'audio' %}
+                        <audio style="width: 250px ;" controls>
+                          <source src="{{message.content}}">
+                        </audio>
+                      {% elif message.what_is_İt == 'video' %}
+                      <video width="250" height="250" controls>
+                        <source src="{{message.content}}">
+                      </video>
+                      {% endif %}
+                  </div>
+                  <span class="message-time pull-right">
+                    {{message.get_Short_date}}
+                  </span>
+              </div>
+            </div>
+          </div>
+      {% else %}
+          <div class="row message-body">
+            <div class="col-sm-12 message-main-receiver">
+              <div class="receiver">
+                <div class="message-text">
+                  {% if message.what_is_İt == 'text' %}
+                    {{message.content}}
+                    {% elif message.what_is_İt == 'image' %}
+                    <img src="{{message.content}}" width="250" height="250">
+                  {% elif message.what_is_İt == 'audio' %}
+                    <audio style="width: 250px ;" controls>
+                      <source src="{{message.content}}">
+                    </audio>
+                  {% elif message.what_is_İt == 'video' %}
+                  <video width="250" height="250" controls>
+                    <source src="{{message.content}}">
+                  </video>
+                  {% endif %}             
+                </div>
+                <span class="message-time pull-right">
+                    {{data.get_Short_date}}
+                </span>
+              </div>
+            </div>
+          </div>
+      {% endif %}
+    {% endfor %}
+
+    
+  </div>
+
+  <div class="row reply">
+    <div class="col-sm-1 col-xs-1 reply-emojis">
+      <i class="fa fa-microphone fa-2x" id="record"></i>
+    </div>
+    <div class="col-sm-9 col-xs-9 reply-main">
+      <input class="form-control" rows="1" id="comment"></input>
+    </div>
+    <div class="col-sm-1 col-xs-1 reply-recording">
+      <input type="file" class="hidden" id="hiddeninput">
+      <i class="fa fa-file fa-2x" id="file" onclick="document.getElementById('hiddeninput').click()" aria-hidden="true"></i>
+    </div>
+    <div class="col-sm-1 col-xs-1 reply-send" id="send">
+      <i class="fa fa-send fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+{{ room_name|json_script:"room-name" }}
+
+{{ request.user.username|json_script:"user" }}
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+
+$(function(){
+$(".heading-compose").click(function() {
+  $(".side-two").css({
+    "left": "0"
+  });
+});
+
+$(".newMessage-back").click(function() {
+  $(".side-two").css({
+    "left": "-100%"
+  });
+});
+})
+
+const roomName = JSON.parse(document.getElementById('room-name').textContent);
+const user = JSON.parse(document.getElementById('user').textContent);
+const conversation=document.getElementById("conversation")
+console.log(roomName)
+
+document.getElementById("hiddeninput").addEventListener('change',hadlefileselect,false)
+
+
+function hadlefileselect(){
+  var file=document.getElementById('hiddeninput').files[0]
+  console.log(file)
+  getbase64(file,file.type)
+}
+
+function getbase64(file,fileType){
+  var type=fileType.split("/")[0]
+  var reader=new FileReader
+  reader.readAsDataURL(file)
+  
+  reader.onload=function(){
+    chatSocket.send(JSON.stringify({
+      'what_is_İt':type,
+      'message': reader.result
+    }));
+  }
+}
+
+
+//mesajlar arttığında arttık sayfanın boyutunu aşacaktır ve sonraki mesajları 
+//görmek için sayfayı indirmek gerekiyor, ben istiyorumki
+//sayfa en alttaki mesaja göre konumlansın yani önceki mesajları görmek için
+//yukarı cekelim. bunun için;
+conversation.scrollTop=conversation.scrollHeight
+
+// ses kaydedici işlemleri;
+
+let isRecord=false
+const startstop=document.getElementById("record")
+startstop.onclick=function(){
+  if(isRecord){
+    stopRecord()
+    startstop.style=""
+    isRecord=false
+  }else{
+    startRecord()
+    startstop.style="color:red"
+    isRecord=true
+  }
+}
+
+
+function startRecord(){
+  navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
+    mediaRecorder= new MediaRecorder(stream)
+    mediaRecorder.start()
+    dataArray=[]
+
+    mediaRecorder.ondataavailable=function (e){
+      dataArray.push(e.data)
+    }
+    mediaRecorder.onstop=function (e){
+      audioData=new Blob(dataArray,{"type":"audio/mp3"})
+      dataArray=[]
+      getbase64(audioData,audioData.type)
+      stream.getTracks().forEach(function (track) {
+        if(track.readyState=="live" && track.kind === "audio"){
+          track.stop()
+        }
+      })
+    }
+  })
+}
+
+
+function stopRecord(){
+  mediaRecorder.stop()
+ 
+}
+
+
+
+
+
+const chatSocket = new WebSocket(
+    'ws://'
+    + window.location.host
+    + '/ws/chat/'
+    + roomName
+    + '/'
+);
+
+chatSocket.onmessage = function(e) {
+    const data = JSON.parse(e.data);
+    const message_type=data.what_is_İt
+   
+    
+    if (message_type === 'text'){
+      var message=data.message
+    }else if (message_type === 'image'){
+      var message=`<img src="${data.message}" width="250" height="250">`
+    
+    }else if (message_type === 'audio'){
+      var message=`<audio controls>
+                    <source src="${data.message}">
+                  </audio>`
+    }else if (message_type === 'video'){
+      var message=`<video width="320" height="240" controls>
+                    <source src="${data.message}">
+                  </video>`
+    }
+    if (user === data.user){
+        var message=`<div class="row message-body">
+                <div class="col-sm-12 message-main-sender">
+                    <div class="sender">
+                        <div class="message-text">
+                            ${message}
+                        </div>
+                        <span class="message-time pull-right">
+                            ${data.created_date}
+                        </span>
+                    </div>
+                </div>
+              </div>`
+    }else{
+        var message=`<div class="row message-body">
+                <div class="col-sm-12 message-main-receiver">
+                    <div class="receiver">
+                        <div class="message-text">
+                            ${message}
+                        </div>
+                        <span class="message-time pull-right">
+                            ${data.created_date}
+                        </span>
+                    </div>
+                </div>
+              </div>`
+    }
+    conversation.innerHTML += message
+
+    // yeni mesaj eklendiğinde de sayfa son mesaja göre konumlansın...
+    // bu mesaj sayfayı yenilemeden düştüğü için buna ihtiyac duyuyoruz
+    conversation.scrollTop=conversation.scrollHeight
+};
+
+chatSocket.onclose = function(e) {
+    console.error('Chat socket closed unexpectedly');
+};
+
+document.querySelector('#comment').focus();
+
+document.querySelector('#comment').onkeyup = function(e) {
+    if (e.keyCode === 13) {  // enter, return
+        document.querySelector('#send').click();
+    }
+};
+
+document.querySelector('#send').onclick = function(e) {
+    const messageInputDom = document.querySelector('#comment');
+    const message = messageInputDom.value;
+    chatSocket.send(JSON.stringify({
+      'what_is_İt':"text",
+      'message': message
+    }));
+    messageInputDom.value = '';
+};
+
+
+
+
+
+</script>
+</body>
+</html>
